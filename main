@@ -17,7 +17,7 @@ hydr_message = "Don't forget to drink water and stay hydrated!"
 hydr_img = 'turtles.jpg'
 
 def publish_test(text):
-	API.update_status(text)
+	api.update_status(text)
 publish_test("hello world")
 
 '''method = True 
