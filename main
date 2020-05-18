@@ -1,6 +1,7 @@
 import tweepy
 from time import sleep
 from random import randint 
+import setup
 
 consumer_key = "QvPyBLxlIFMi5bQJ8FEtUyiSd" 
 consumer_secret = "8ayGe7kd2qLFo8ffU1WXbJ5UEGBIZDuGIVk1jwluLxWgCBOwCK" 
