@@ -14,7 +14,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 discord==1.0.1
 discord.py==1.2.5
-Django==3.0.5
+Django==3.0.7
 entrypoints==0.3
 googletrans==2.4.0
 idna==2.8
