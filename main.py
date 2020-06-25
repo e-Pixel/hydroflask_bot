@@ -1,7 +1,7 @@
 import tweepy
 from time import sleep
 from random import randint 
-import setup
+
 
 consumer_key = environ['consumer_key'] 
 consumer_secret = environ['consumer_secret']  
