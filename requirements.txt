@@ -55,7 +55,6 @@ ply==3.11
 prometheus-client==0.7.1
 prompt-toolkit==3.0.5
 pydub==0.23.1
-pygame==1.9.6
 Pygments==2.6.1
 pylint==2.4.4
 pymongo==3.10.1
