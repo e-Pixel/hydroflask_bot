@@ -3,10 +3,10 @@ from time import sleep
 from random import randint 
 import setup
 
-consumer_key = "QvPyBLxlIFMi5bQJ8FEtUyiSd" 
-consumer_secret = "8ayGe7kd2qLFo8ffU1WXbJ5UEGBIZDuGIVk1jwluLxWgCBOwCK" 	
-access_token = "1250597054302355456-mv5EtZUh8RCLnvjmv6TVupD5k3bIid" 	
-access_token_secret = "AxrdOT5tShF3ZXvVtomgPybdYMZek0UC1A9OnehJdZygI" 
+consumer_key = environ['consumer_key'] 
+consumer_secret = environ['consumer_secret']  
+access_token = environ['access_token'] 
+access_token_secret = environ['access_token_secret'] 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
