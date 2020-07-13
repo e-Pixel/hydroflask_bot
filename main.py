@@ -1,28 +1,33 @@
 import tweepy
-from time import sleep
-from random import randint 
+from time import sleep # delay 
+from datetime import datetime
+import random
+import os 
+import calendar
 
-consumer_key = None # security
+print("Beginning...!")
+
+consumer_key = None
 consumer_secret = None
-access_token = None 
+access_token = None
 access_token_secret = None
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth) # insert authorization
-public_tweets = api.home_timeline() # a copy of the timeline in my twitter account
+public_tweets = api.home_timeline() # a copy of the timeline in my twitter account (completely optional)
 
-print(public_tweets)
+nowZone = datetime.now()
+newMessage = r"Today is {1} {0}, {2} ... Don't forget to stay hydrated!".format(str(nowZone.day), calendar.month_name[nowZone.month], str(nowZone.year))
+# Today is MONTH DAY, YEAR ... Don{t forget to stay hydrated!
 
-hydr_message = "Don't forget to drink water and stay hydrated!"
-hydr_img = 'turtles.jpg'
-hydr_list = ["turtles.jpg","01.jpg"]
+def getRandomPicture(): # getting random picture from directory 
+    chooseRandomElement = random.choice(os.listdir("imagenes/"))
+    print(chooseRandomElement)
+    return "imagenes/" + chooseRandomElement
 
-def getRandomPicture(): # refresh everytime 
-	randomNumber = randint(0,len(hydr_list)-1)
-	return randomNumber
-
-while True:
-	value = getRandomPicture()
-	api.update_with_media(hydr_list[value],status=hydr_message)
-	sleep(3600) # an hour has 3600 seconds
+while True: # making everything
+    value = getRandomPicture()
+    api.update_with_media(getRandomPicture(),status=newMessage)
+    sleep(86400) # an hour has 3600 seconds
+    # a day has 86400 seconds
