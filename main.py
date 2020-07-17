@@ -19,7 +19,7 @@ public_tweets = api.home_timeline() # a copy of the timeline in my twitter accou
 
 nowZone = datetime.now()
 newMessage = r"Today is {1} {0}, {2} ... Don't forget to stay hydrated!".format(str(nowZone.day), calendar.month_name[nowZone.month], str(nowZone.year))
-# Today is MONTH DAY, YEAR ... Don{t forget to stay hydrated!
+# Today is MONTH DAY, YEAR ... Don't forget to stay hydrated!
 
 def getRandomPicture(): # getting random picture from directory 
     chooseRandomElement = random.choice(os.listdir("imagenes/"))
